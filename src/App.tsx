@@ -84,7 +84,7 @@ function App() {
               <div className="w-full bg-black rounded-t-3xl h-64 sm:h-80 md:h-96">
                 <video
                   ref={videoRef}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   controls
                   preload="metadata"
                   poster="/video-poster.svg"

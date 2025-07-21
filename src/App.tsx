@@ -9,7 +9,7 @@ function App() {
 
   // Ruta del video local - Coloca tu video en la carpeta public/
   const videoUrl = '/videoprueba.mp4';
-  const videoTitle = 'Haz Click para Ver tu Sorpresa';
+  const videoTitle = 'LUISA Haz Click para Ver tu Sorpresa';
 
   const handleDownload = async () => {
     setIsDownloading(true);

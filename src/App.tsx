@@ -71,7 +71,7 @@ function App() {
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              {videoTitle}
+              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold">LUISA</span> Haz Click para Ver tu Sorpresa
             </h2>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
               Un mensaje lleno de amor y sabor, hecho especialmente para ti

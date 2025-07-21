@@ -13,19 +13,16 @@
   
   <rect width="300" height="500" fill="url(#bgGradient)"/>
   
-  <!-- Nombre resaltado -->
-  <text x="150" y="180" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="32" fill="url(#playGradient)">LUISA</text>
-  
   <!-- Texto principal -->
-  <text x="150" y="220" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="20" fill="#374151">Descubre tu sorpresa</text>
+  <text x="150" y="200" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#374151">Descubre tu sorpresa</text>
   
   <!-- Botón de play centrado -->
-  <g transform="translate(150, 270)">
+  <g transform="translate(150, 250)">
     <circle r="40" fill="url(#playGradient)" opacity="0.9"/>
     <circle r="40" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
     <polygon points="-12,-15 -12,15 18,0" fill="white"/>
   </g>
   
   <!-- Texto sutil en la parte inferior -->
-  <text x="150" y="340" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="14" fill="#6B7280" opacity="0.7">Haz clic para reproducir</text>
+  <text x="150" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="14" fill="#6B7280" opacity="0.7">Haz clic para reproducir</text>
 </svg>

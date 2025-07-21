@@ -5,35 +5,21 @@
       <stop offset="50%" style="stop-color:#FECACA;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#FEF3C7;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="logoGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="playGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#EA580C;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#EF4444;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#EA580C;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#EA580C;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#EAB308;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <rect width="1200" height="675" fill="url(#bgGradient)"/>
   
-  <!-- Logo SABORIARTE -->
-  <g transform="translate(600, 280)">
-    <!-- Ícono de video -->
-    <circle cx="0" cy="-80" r="50" fill="url(#logoGradient1)" opacity="0.9"/>
-    <polygon points="-15,-95 -15,-65 15,-80" fill="white"/>
-    
-    <!-- Texto SABORIARTE -->
-    <text x="0" y="0" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="72" fill="url(#logoGradient1)">SABOR</text>
-    <text x="144" y="0" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="72" fill="url(#logoGradient1)">Y</text>
-    <text x="264" y="0" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="72" fill="url(#logoGradient2)">ARTE</text>
-    
-    <!-- Subtítulo -->
-    <text x="132" y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="24" fill="#374151">Tu Sorpresa Especial</text>
-    
-    <!-- Indicador de reproducción -->
-    <text x="132" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="18" fill="#6B7280">Haz click para reproducir</text>
+  <!-- Botón de play centrado -->
+  <g transform="translate(600, 337.5)">
+    <circle r="80" fill="url(#playGradient)" opacity="0.9"/>
+    <circle r="80" fill="none" stroke="white" stroke-width="3" opacity="0.3"/>
+    <polygon points="-25,-30 -25,30 35,0" fill="white"/>
   </g>
+  
+  <!-- Texto sutil en la parte inferior -->
+  <text x="600" y="580" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="20" fill="#6B7280" opacity="0.7">Haz clic para reproducir</text>
 </svg>

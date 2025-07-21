@@ -81,7 +81,7 @@ function App() {
           {/* Video Container */}
           <div className="bg-white rounded-3xl shadow-2xl border border-orange-100 overflow-hidden mb-12">
             <div className="relative group">
-              <div className="w-full bg-black rounded-t-3xl" style={{ height: '600px' }}>
+              <div className="w-full bg-black rounded-t-3xl h-64 sm:h-80 md:h-96">
                 <video
                   ref={videoRef}
                   className="w-full h-full object-contain"

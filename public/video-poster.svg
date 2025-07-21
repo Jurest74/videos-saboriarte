@@ -13,13 +13,16 @@
   
   <rect width="1200" height="675" fill="url(#bgGradient)"/>
   
+  <!-- Texto principal -->
+  <text x="600" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" fill="#374151">Descubre tu sorpresa</text>
+  
   <!-- Botón de play centrado -->
-  <g transform="translate(600, 337.5)">
-    <circle r="80" fill="url(#playGradient)" opacity="0.9"/>
-    <circle r="80" fill="none" stroke="white" stroke-width="3" opacity="0.3"/>
-    <polygon points="-25,-30 -25,30 35,0" fill="white"/>
+  <g transform="translate(600, 360)">
+    <circle r="60" fill="url(#playGradient)" opacity="0.9"/>
+    <circle r="60" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <polygon points="-18,-22 -18,22 26,0" fill="white"/>
   </g>
   
   <!-- Texto sutil en la parte inferior -->
-  <text x="600" y="580" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="20" fill="#6B7280" opacity="0.7">Haz clic para reproducir</text>
+  <text x="600" y="480" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="18" fill="#6B7280" opacity="0.7">Haz clic para reproducir</text>
 </svg>

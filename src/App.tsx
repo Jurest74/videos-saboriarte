@@ -87,6 +87,7 @@ function App() {
                   className="w-full h-full object-contain"
                   controls
                   preload="metadata"
+                  poster="/video-poster.svg"
                   style={{ borderRadius: '24px 24px 0 0' }}
                   onPlay={() => setPlaying(true)}
                   onPause={() => setPlaying(false)}

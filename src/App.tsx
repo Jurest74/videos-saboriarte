@@ -9,7 +9,7 @@ function App() {
 
   // Ruta del video local - Coloca tu video en la carpeta public/
   const videoUrl = '/videoprueba.mp4';
-  const videoTitle = 'Luisa Haz Click para Ver tu Sorpresa';
+  const videoTitle = 'Clidddck para Ver tu Sorpresa';
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -71,10 +71,10 @@ function App() {
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">Luisa</span> Haz Click para Ver tu Sorpresa
+              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">LUISA </span>Haz Click para Ver tu Sorpresa
             </h2>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-              Un mensaje lleno de amor y sabor, hecho especialmente para ti
+              Este es un mensaje lleno de amor y sabor, hecho especialmente para ti
             </p>
           </div>
 
@@ -84,7 +84,7 @@ function App() {
               <div className="w-full bg-black rounded-t-3xl h-64 sm:h-80 md:h-96">
                 <video
                   ref={videoRef}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   controls
                   preload="metadata"
                   poster="/video-poster.svg"

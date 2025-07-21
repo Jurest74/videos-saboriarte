@@ -67,12 +67,15 @@ function App() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl mb-6 shadow-lg">
               <Video className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8">
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">LUISA </span>Haz Click para Ver tu Sorpresa
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">LUISA</span>
             </h2>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Haz Click para Ver tu Sorpresa
+            </h3>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
               Este es un mensaje lleno de amor y sabor, hecho especialmente para ti
             </p>

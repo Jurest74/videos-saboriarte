@@ -71,8 +71,8 @@ function App() {
         <div className="max-w-4xl w-full mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl mb-6 shadow-lg">
-              <Video className="w-8 h-8 text-white" />
+            <div className="mb-2 flex justify-center">
+              <img src="/martaLogo.png" alt="Logo Marta" className="w-48 h-48 object-contain mx-auto" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-8">
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>

@@ -63,14 +63,6 @@ function App() {
     }
   };
 
-  const debugVideoUrl = (
-  <div className="text-center text-xs text-gray-500 mb-2">
-    <span>Video URL actual: <code>{videoUrl}</code></span>
-  </div>
-);
-// En tu componente App.tsx, en algún lugar accesible:
-console.log('¿Son idénticas las URLs?', videoUrl === '/didier.mp4');
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-600/10 to-red-600/10"></div>
@@ -91,12 +83,7 @@ console.log('¿Son idénticas las URLs?', videoUrl === '/didier.mp4');
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Haz Click para Ver tu Sorpresa
             </h3>
-  // Mostrar el videoUrl actual para depuración
-  const debugVideoUrl = (
-    <div className="text-center text-xs text-gray-500 mb-2">
-      <span>Video URL actual: <code>{videoUrl}</code></span>
-    </div>
-  );
+
             <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
               Este es un mensaje lleno de amor y sabor, hecho especialmente para ti
             </p>
@@ -138,7 +125,6 @@ console.log('¿Son idénticas las URLs?', videoUrl === '/didier.mp4');
           </div>
 
           <div className="bg-white rounded-xl p-6 border border-orange-100 shadow-lg mt-4 mb-8">
-            {debugVideoUrl}
             <div className="flex items-center justify-center text-gray-600">
               <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-3">
                 <span className="text-white text-sm font-bold">💡</span>

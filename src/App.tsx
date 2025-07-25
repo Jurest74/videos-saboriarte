@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { Play, Download, Loader2, CheckCircle, Video } from 'lucide-react';
+import { getClientConfig } from './clientConfig';
+import { useUrlParams } from './useUrlParams';
 
 function App() {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -7,9 +9,14 @@ function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
-  // Ruta del video local - Coloca tu video en la carpeta public/
-  const videoUrl = '/videoprueba.mp4';
-  const videoTitle = 'Clidddck para Ver tu Sorpresa';
+  // Get client configuration based on URL parameter
+  const { getParam } = useUrlParams();
+  const clientName = getParam('cliente');
+  const config = useMemo(() => getClientConfig(clientName || undefined), [clientName]);
+  
+  // Use dynamic configuration
+  const videoUrl = config.videoUrl;
+  const videoTitle = 'Click para Ver tu Sorpresa';
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -23,7 +30,7 @@ function App() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${videoTitle.replace(/\s+/g, '_')}.mp4`;
+      a.download = `${config.name}_${videoTitle.replace(/\s+/g, '_')}.mp4`;
       
       // Disparar descarga
       document.body.appendChild(a);
@@ -56,6 +63,14 @@ function App() {
     }
   };
 
+  const debugVideoUrl = (
+  <div className="text-center text-xs text-gray-500 mb-2">
+    <span>Video URL actual: <code>{videoUrl}</code></span>
+  </div>
+);
+// En tu componente App.tsx, en algún lugar accesible:
+console.log('¿Son idénticas las URLs?', videoUrl === '/didier.mp4');
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-600/10 to-red-600/10"></div>
@@ -71,11 +86,17 @@ function App() {
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>
             </h1>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">LUISA</span>
+              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">{config.name}</span>
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Haz Click para Ver tu Sorpresa
             </h3>
+  // Mostrar el videoUrl actual para depuración
+  const debugVideoUrl = (
+    <div className="text-center text-xs text-gray-500 mb-2">
+      <span>Video URL actual: <code>{videoUrl}</code></span>
+    </div>
+  );
             <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
               Este es un mensaje lleno de amor y sabor, hecho especialmente para ti
             </p>
@@ -86,6 +107,7 @@ function App() {
             <div className="relative group">
               <div className="w-full bg-black rounded-t-3xl h-64 sm:h-80 md:h-96">
                 <video
+                key={videoUrl} // Asegúrate de que el video se actualice al cambiar la URL
                   ref={videoRef}
                   className="w-full h-full object-cover md:object-contain"
                   controls
@@ -96,7 +118,7 @@ function App() {
                   onPause={() => setPlaying(false)}
                   onEnded={() => setPlaying(false)}
                 >
-                  <source src={videoUrl} type="video/mp4" />
+                  <source src={videoUrl } type="video/mp4" />
                   Tu navegador no soporta el elemento de video.
                 </video>
               </div>
@@ -115,17 +137,17 @@ function App() {
             </div>
           </div>
 
-                      <div className="bg-white rounded-xl p-6 border border-orange-100 shadow-lg mt-4 mb-8">
-              <div className="flex items-center justify-center text-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-white text-sm font-bold">💡</span>
-                </div>
-                <p className="text-lg">
-                  Tienes 6 horas para descargar el video antes de que se elimine automáticamente.
-                  
-                </p>
+          <div className="bg-white rounded-xl p-6 border border-orange-100 shadow-lg mt-4 mb-8">
+            {debugVideoUrl}
+            <div className="flex items-center justify-center text-gray-600">
+              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-3">
+                <span className="text-white text-sm font-bold">💡</span>
               </div>
+              <p className="text-lg">
+                Tienes 6 horas para descargar el video antes de que se elimine automáticamente.
+              </p>
             </div>
+          </div>
 
           {/* Download Section */}
           <div className="text-center space-y-8 mb-12">

@@ -77,6 +77,9 @@ function App() {
             <h1 className="text-4xl md:text-5xl font-bold mb-8">
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">SABOR</span><span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">Y</span><span className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide drop-shadow-sm">ARTE</span>
             </h1>
+            <div className="flex justify-center">
+              <div className="w-72 h-0.5 rounded-full bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 mb-4"></div>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">{config.name}</span>
             </h2>

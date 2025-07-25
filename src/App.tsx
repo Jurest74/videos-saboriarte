@@ -80,8 +80,8 @@ function App() {
             <div className="flex justify-center">
               <div className="w-72 h-0.5 rounded-full bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 mb-4"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-extrabold italic">{config.name}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-sans">
+              <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent font-bold">{config.name}</span>
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Haz Click para Ver tu Sorpresa
